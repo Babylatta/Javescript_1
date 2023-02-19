@@ -1,23 +1,19 @@
-const calculator = {
-    add:function (a,b) {
-        console.log(a+b);
-    },
-    minus:function (a,b) {
-        console.log(a-b);
-    },
-    multiply:function (a,b) {
-        console.log(a*b);
-    },
-    div:function (a,b) {
-        console.log(a/b);
-    },
-    power:function (a,b) {
-        console.log(a**b);
-    },
-};
+const title = document.querySelector("div.hello:first-child h1");
 
-calculator.add(5,1);
-calculator.minus(100,1);
-calculator.multiply(7,1000);
-calculator.div(16,4);
-calculator.power(5,3); 
+function handleTitleClick() {
+    title.style.color="blue";
+}
+
+function handleMouseEnter() {
+    title.innerText="Mouse is here!";
+}
+
+function handleMouseLeave() {
+    title.innerText="Mouse is gone!";
+}
+
+
+
+title.addEventListener("click",handleTitleClick);
+title.addEventListener("mouseenter",handleMouseEnter);
+title.addEventListener("mouseleave",handleMouseLeave);
