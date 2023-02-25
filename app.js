@@ -1,15 +1,19 @@
-const h1 = document.querySelector("div.hello:first-child h1");
 
-function handleTitleClick() {
-    const currentColor = h1.style.color;
-    let newColor;
-    if (currentColor === "blue") {
-        newColor = "tomato";
-    } else {
-        newColor = "blue";
-    }
-    h1.style.color = newColor;
+const loginForm = document.querySelector("#login-form");
+const loginInput= document.querySelector("#login-form input");
+
+const link = document.querySelector("a")
+
+
+function onLoginSubmit(event) {
+   event.preventDefault();
+   console.log(loginInput.value);
+}
+
+function handleLinkClick() {
+   alert("clicked!")
 }
 
 
-h1.addEventListener("click",handleTitleClick);
+loginform.addEventListener("submit",onLoginSubmit);
+link.addEventListener("click")
